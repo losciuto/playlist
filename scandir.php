@@ -1,9 +1,13 @@
 <?PHP
+
   global $db, $conn, $truncate_tab;
+  
   // effettua un truncate sulla tabella o meno
   $truncate_tab = false;
+  
    // aggiorna la base dati o meno uso debug
   $db = true;
+  
   // Original PHP code by Chirp Internet: www.chirp.com.au
   // Please acknowledge use of this code by including this header.
   function getFileList($dir, $recurse = FALSE)
@@ -27,16 +31,6 @@
       // skip hidden files
       if($entry{0} == ".") continue;
       if(is_dir("{$dir}{$entry}")) {
-	//continue;
-	/*
-        $retval[] = [
-          'name' => "{$entry}/",
-         'file' => "{$dir}{$entry}/",
-          'type' => filetype("{$dir}{$entry}"),
-          'size' => 0,
-          'lastmod' => filemtime("{$dir}{$entry}")
-        ];
-	*/
         if($recurse && is_readable("{$dir}{$entry}/")) {
           $retval = array_merge($retval, getFileList("{$dir}{$entry}/", TRUE));
         }
@@ -44,15 +38,6 @@
 	if(in_array(mime_content_type("{$dir}{$entry}"),$video)){
         // esclude l'estensione .sub e l'estensione .vob
         if((strtolower(substr("{$entry}",-4)) != ".sub") && (strtolower(substr("{$entry}",-4)) != ".vob")){
-            /*
-                $retval[] = [
-                    'name' => "'" . $conn->real_escape_string(substr("{$entry}",0,-4)) . "'",
-                    'file' => "'" . $conn->real_escape_string("{$dir}{$entry}" ). "'",
-                    'type' => "'" . $conn->real_escape_string(mime_content_type("{$dir}{$entry}")) . "'",
-                    'size' => "'" . filesize("{$dir}{$entry}") . "'",
-                    'lastmod' => "'" . date ("Y-m-d H:i:s", filemtime("{$dir}{$entry}"))."'"
-                ];
-                */
                 $retval[] = [
                     'name' => "'" . substr("{$entry}",0,-4) . "'",
                     'file' => "'" . "{$dir}{$entry}" . "'",
@@ -75,22 +60,17 @@ if($db) include_once("db.php");
 $numdir = count($argv) -1;
 $inizio = 1;
 if($argv[1] == 0) {
-    //$numdir--; 
     $inizio++; 
     $truncate_tab = false;
 }  
 if($argv[1] == 1) {
-    //$numdir--; 
     $inizio++; 
     $truncate_tab = true;
     echo "La tabella " . $tabella . " verrà troncata (truncate)!!!\n";
 }  else {
     echo "I dati verranno aggiunti alla tabella " . $tabella . "\n";
     }
-//echo $numdir . " " . $inizio;
-//echo $argv[1] == 1; exit ;
-//$dir = getFileList('/media/root/TrekStor1/Films',TRUE);
-//$dir = getFileList('/media/root/backup/Films',TRUE);
+
 // ciclo scansione directory
 for($j = $inizio; $j <= $numdir; $j++){
     echo "Fase raccolta dati dalla periferica directory: " . $argv[$j] . "...";    
