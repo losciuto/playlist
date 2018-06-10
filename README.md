@@ -18,6 +18,4 @@ lanciare il seguente comando che si occupera' di recupare i dati utili dei video
 Lo zero oppure l'uno subito dopo scandir.php determinano se la tabella video della base dati verrà svuotata (1) o meno (0). Usare lo zero è utile per accodare altre  cartelle senza dover riiniziare. Fate comunque attenzione ai duplicati per i quali questi script non hanno controlli. N.B.: le cartelle che contengono spazi vanno digitate dentro le virgolette;
 Usare "php aggrionadb.php" è condizionato alla presenza dei file .nfo. Ovvero se non ci sono, non ha senso lanciarlo. In caso di .nfo sui dischi questo script associa i generi al video;
 Per creare una play list casuale lanciare php playlistcasuale.php -n4 -e"vob cd1 cd2" -g"Animazione Family". -n è il numero di video da inserire nella play list, -e esclude i video che contegono le parole elencate, -g funziona solo se sono stati inseriti i generi, permette di filtrare i generi associati ai video.
-
-
-
+Lo script "generi.php" ha il solo scopo di elencare i generi grabbati dai file .nfo
