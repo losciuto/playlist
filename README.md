@@ -48,5 +48,5 @@ list_txt.php scrive sul file "lista.txt" l'intera lista dei video, il formato è
 I parametri per list_txt.php sono -g per una lista ordinata per genere (per default è ordinata per ordine alfabetico crescente del titolo);
 -d ordina per titolo o per genere (-g) in ordine descrescente.
 
-Sono state aggiunte alcune interfacce grafiche realizzate grazie a [Yad (Yet Another Dialog)](https://github.com/v1cont/yad) che rendono l'interazione più facile. [Vedi relativo repository](losciuto/yad-windows-playlist)
+Sono state aggiunte alcune interfacce grafiche realizzate grazie a [Yad (Yet Another Dialog)](https://github.com/v1cont/yad) che rendono l'interazione più facile. [Vedi relativo repository](https://github.com/losciuto/yad-windows-playlist)
 
