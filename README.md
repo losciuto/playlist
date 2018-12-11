@@ -13,6 +13,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 4) un terminale per usare la riga di comando.
 
 # Come: 
+
 <ul>
 <li>
 <b>1)</b>   Dopo aver abilitato i PDO, lanciare la creazione
@@ -55,6 +56,7 @@ Gli altri file php sono degli include necessari per il funzionamento.
 # Parametri possibili:
 
 Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
+
 <b>-n</b> il numero di titoli che volete nella playlist (default "5"). Se si utilizza lo zero (0) il numero massimo verrà impostato a 999999.<br>
 <b>-e</b> termini che volete escludere dalla visione. I termini in questione sono il path ed il nome del file. Se sono presenti degli spazi è meglio includere i termini fra virgolette singole o doppie (<i>default "cartoni inglesi cd1 cd2 originali vob serie volume originale"</i>);<br>
 <b>-g</b> i generi da includere nella visione. Se sono più di uno, separare con uno spazio ed includere fra le virgolette (funziona solo se l'archivio è stato aggionato con <i>aggiornadb.php</i>.);<br>
