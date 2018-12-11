@@ -22,8 +22,8 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 <li>
 <b>2)</b> 	lanciare il seguente comando che si occupera' di recupare i dati utili 
 		  	dei video e li memorizzerà nell base dati (video.sq3): 
-		  	"<i>php scandir.php 0|1 le/cartelle/dove/sono/i/video/separate/da/spazi/se/sono/diverse</i>".
-			<b>Esempio pratico:</b> 
+		  	"<i>php scandir.php 0|1 le/cartelle/dove/sono/i/video/separate/da/spazi/se/sono/diverse</i>".<br>
+			<b>Esempio pratico:</b><br> 
 			"<i>php scandir.php 1 /media/root/TrecStor/Films /media/root/backup/Films</i>". 
 			Lo zero oppure l'uno subito dopo scandir.php
 			determinano se la tabella video della base dati verrà svuotata (<i>1</i>) o
