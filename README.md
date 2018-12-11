@@ -45,7 +45,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			-g funziona solo se sono stati inseriti i generi, permette di filtrare i
 			generi associati ai video.<br>
 </li>
-<ul>
+</ul>
 	
 Lo script "<i>generi.php</i>"" ha il solo scopo di elencare i generi presi dai file .nfo. Lo script "<i>list_txt</i>", esporta la lista dei video in archivio in formato csv/txt con separatore il punto e virgola (;). I parametri per list_txt.php sono:
 <b>-g</b> per una lista ordinata per genere (per default è ordinata per ordine alfabetico crescente del titolo);
@@ -54,7 +54,7 @@ Gli altri file php sono degli include necessari per il funzionamento.
 
 # Parametri possibili:
 
-Tutti i parametri sono opzionali in quanto sono dati tutti di default.
+Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
 <b>-n</b> il numero di titoli che volete nella playlist (default "5"). Se si utilizza lo zero (0) il numero massimo verrà impostato a 999999.<br>
 <b>-e</b> termini che volete escludere dalla visione. I termini in questione sono il path ed il nome del file. Se sono presenti degli spazi è meglio includere i termini fra virgolette singole o doppie (<i>default "cartoni inglesi cd1 cd2 originali vob serie volume originale"</i>);<br>
 <b>-g</b> i generi da includere nella visione. Se sono più di uno, separare con uno spazio ed includere fra le virgolette (funziona solo se l'archivio è stato aggionato con <i>aggiornadb.php</i>.);<br>
