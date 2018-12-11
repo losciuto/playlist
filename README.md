@@ -31,7 +31,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			<b>N.B.:</b> le cartelle che contengono spazi vanno
 			digitate dentro le virgolette (singole o doppie"); <br>
 </li>
-</li>
+<li>
 <b>3)</b> 	dopo aver usato scandir.php, usare "<i>php aggrionadb.php</i>" solo se avete dei file .nfo con 
 			lo stesso nome dei video. Ovvero se non ci sono, non ha
 			senso lanciarlo. In caso di presenza di .nfo sui dischi questo script associa i
@@ -46,6 +46,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			generi associati ai video.<br>
 </li>
 <ul>
+	
 Lo script "<i>generi.php</i>"" ha il solo scopo di elencare i generi presi dai file .nfo. Lo script "<i>list_txt</i>", esporta la lista dei video in archivio in formato csv/txt con separatore il punto e virgola (;). I parametri per list_txt.php sono:
 <b>-g</b> per una lista ordinata per genere (per default è ordinata per ordine alfabetico crescente del titolo);
 <b>-d</b> ordina per titolo o per genere (<i>-g</i>) in ordine descrescente. 
@@ -54,25 +55,25 @@ Gli altri file php sono degli include necessari per il funzionamento.
 # Parametri possibili:
 
 Tutti i parametri sono opzionali in quanto sono dati tutti di default.
-<b>-n</b> il numero di titoli che volete nella playlist (default "5"). Se si utilizza lo zero (0) il numero massimo verrà impostato a 999999.
-<b>-e</b> termini che volete escludere dalla visione. I termini in questione sono il path ed il nome del file. Se sono presenti degli spazi è meglio includere i termini fra virgolette singole o doppie (<i>default "cartoni inglesi cd1 cd2 originali vob serie volume originale"</i>);
-<b>-g</b> i generi da includere nella visione. Se sono più di uno, separare con uno spazio ed includere fra le virgolette (funziona solo se l'archivio è stato aggionato con <i>aggiornadb.php</i>.);
-<b>-m</b> il nome del player da utilizzare per la visione (<i>default "smplayer"</i>);
-<b>-f</b> il nome del file di playlist (<i>default "testpl.xml.xspf"</i>);
-<b>-d</b> la cartella dove va a risiedere il file di playlist (</i>default "scalette/"</i>);
-<b>-r</b> consente di selezionare i video dei registi da includere nella palylist in ordine di anno crescente o decresente determinato con l'opzione <i>-o</i> (<i>si perde il principio di casualità</i>);
-<b>-o</b> opzione di ordine crescente o decrescente utilizzato solo nelle opzioni -r o -u (<i>default crescente = A, opzione decrescente = D</i>);
-<b>-u</b> permette di visionare i titoli scaricati per <i>ultimi</i> o per <i>primi</i> (<i>dipende dalla opzione -o che è per default crescente ovvero i primi inseriti</i>) in funzione della data di modifica del file video. Anche con questa opzione, di fatto, si perde il principio di casualità;
-<b>-i</b> permette di includere dei termini da ricercare nel path e nel titolo, è predominante sui termini da escludere (<i>-e</i>), ovvero i termini da includere sono prioritari rispetto a quelli da escludere.
+<b>-n</b> il numero di titoli che volete nella playlist (default "5"). Se si utilizza lo zero (0) il numero massimo verrà impostato a 999999.<br>
+<b>-e</b> termini che volete escludere dalla visione. I termini in questione sono il path ed il nome del file. Se sono presenti degli spazi è meglio includere i termini fra virgolette singole o doppie (<i>default "cartoni inglesi cd1 cd2 originali vob serie volume originale"</i>);<br>
+<b>-g</b> i generi da includere nella visione. Se sono più di uno, separare con uno spazio ed includere fra le virgolette (funziona solo se l'archivio è stato aggionato con <i>aggiornadb.php</i>.);<br>
+<b>-m</b> il nome del player da utilizzare per la visione (<i>default "smplayer"</i>);<br>
+<b>-f</b> il nome del file di playlist (<i>default "testpl.xml.xspf"</i>);<br>
+<b>-d</b> la cartella dove va a risiedere il file di playlist (</i>default "scalette/"</i>);<br>
+<b>-r</b> consente di selezionare i video dei registi da includere nella palylist in ordine di anno crescente o decresente determinato con l'opzione <i>-o</i> (<i>si perde il principio di casualità</i>);<br>
+<b>-o</b> opzione di ordine crescente o decrescente utilizzato solo nelle opzioni -r o -u (<i>default crescente = A, opzione decrescente = D</i>);<br>
+<b>-u</b> permette di visionare i titoli scaricati per <i>ultimi</i> o per <i>primi</i> (<i>dipende dalla opzione -o che è per default crescente ovvero i primi inseriti</i>) in funzione della data di modifica del file video. Anche con questa opzione, di fatto, si perde il principio di casualità;<br>
+<b>-i</b> permette di includere dei termini da ricercare nel path e nel titolo, è predominante sui termini da escludere (<i>-e</i>), ovvero i termini da includere sono prioritari rispetto a quelli da escludere.<br>
 
 # Esempi:
 
-<b>php playlistcasuale.php</b> (lancia la creazione di una playlist con i parametri di default e relativa visione);
-<b>php playlistcasuale.php -u</b> (lancia la creazione e la visione dei 5 video <i>più vecchi</i> con il resto dei parametri di default);
-<b>php playlistcasuale.php -u -o"D" -e""</b> (lancia la creazione e la visione di una playlist dei 5 video <i>più recenti, senza termini esclusi</i>);
-<b>php playlistcasuale.php -u -o"D" -e"" -g"Animazione Famiglia"</b> (lancia la creazione e la visione di una playlist di 5 video <i>più recenti, senza termini esclusi, dei generi: Animazione e Famiglia</i>);
-<b>php playlistcasuale.php -n3 -g"Fantascienza Sci-fi"</b> (lancia una playlist casuale per <i>3</i> video di genere <i>Fantascienza e Sci-fi</i> con esclusione dei termini di default);
-<b>php playlistcasuale.php -n3 -r"'Stanley Kubrick'"</b> (lancia una playlist casuale per <i>3</i> video del regista <i>'Stanley Kubrick'</i> dal piu' vecchio al piu' nuovo senza definizione di genere o esclusione dei termini di default);
+<b>php playlistcasuale.php</b> (lancia la creazione di una playlist con i parametri di default e relativa visione);<br>
+<b>php playlistcasuale.php -u</b> (lancia la creazione e la visione dei 5 video <i>più vecchi</i> con il resto dei parametri di default);<br>
+<b>php playlistcasuale.php -u -o"D" -e""</b> (lancia la creazione e la visione di una playlist dei 5 video <i>più recenti, senza termini esclusi</i>);<br>
+<b>php playlistcasuale.php -u -o"D" -e"" -g"Animazione Famiglia"</b> (lancia la creazione e la visione di una playlist di 5 video <i>più recenti, senza termini esclusi, dei generi: Animazione e Famiglia</i>);<br>
+<b>php playlistcasuale.php -n3 -g"Fantascienza Sci-fi"</b> (lancia una playlist casuale per <i>3</i> video di genere <i>Fantascienza e Sci-fi</i> con esclusione dei termini di default);<br>
+<b>php playlistcasuale.php -n3 -r"'Stanley Kubrick'"</b> (lancia una playlist casuale per <i>3</i> video del regista <i>'Stanley Kubrick'</i> dal piu' vecchio al piu' nuovo senza definizione di genere o esclusione dei termini di default);<br>
 <b>php playlistcasuale.php -n3 -o"D" -r"'Rocco Papaleo'"</b> (lancia una playlist casuale per <i>3</i> video del regista <i>'Rocco Papaleo'</i> ad iniziare dal più <i>recente</i>, senza definizione di genere o esclusione dei termini di default).
 ...
 
