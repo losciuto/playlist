@@ -41,7 +41,7 @@ php playlistcasuale.php -n3 -r"Stanley Kubrick" (viene creata una playlist casua
 php playlistcasuale.php -n3 -o"D" -r"Rocco Papaleo" (viene creata una playlist casuale per tre video del regista Rocco Papaleo ad iniziare dal piu' recente senza definizione di genere o esclusione dei termini di default);
 
 
-# N.B.: alcuni file hanno solo funzioni di servizio: generi.php visualizza i generi presenti nella base dati; 
+<b>N.B.:</b> alcuni file hanno solo funzioni di servizio: generi.php visualizza i generi presenti nella base dati; 
 list_txt.php scrive sul file "lista.txt" l'intera lista dei video, il formato è quello di un csv per cui importabile su di un foglio di calcolo.
 I parametri per list_txt.php sono -g per una lista ordinata per genere (per default è ordinata per ordine alfabetico crescente del titolo);
 -d ordina per titolo o per genere (-g) in ordine descrescente.
