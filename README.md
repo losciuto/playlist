@@ -1,4 +1,4 @@
-<a href="#Cosa serve:">Cosa serve</a>
+
 
 # Gestione playlist
 Scopo di queste righe in php è quello di creare una base dati SQLite3 di video presenti sulle vostre periferiche, nel caso in cui avete file di tipo .nfo (gli .nfo che ho usato sono sati generati da Kodi media center) con i generi associati ai video, di aggiornare la basedati con i generi relativi ai video che avete memorizzato. Alla fine, lanciando playlistcasuale.php, creare ed eseguire una playlist creata casualmente dalla precedente basedati.
