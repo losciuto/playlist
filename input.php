@@ -13,20 +13,29 @@
     // controlla l'ultimo id inserito nella tabella
     $sql = "SELECT MAX(id) as id FROM " . $tabella . ";";
     $result = $conn->query($sql);
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                $i = $row['id'];
-                echo "Ultimo id: " . $i;
-            }
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $i = $row['id'];
+            echo "Ultimo id: " . $i . "\n";
+        }
     $result = null;
     foreach ($ndir as $k => $v) {
         $i++;
-        $sql = "INSERT INTO " . $tabella . " (id,".
+        /*
+        // gestisce l'id
+        $sql = "INSERT OR IGNORE INTO " . $tabella . " (id,".
                 implode(',',array_keys($v)).
                 ") VALUES ($i,".
                 implode(',',$v).
             ")";
+        */
+        // fa gestire l'id al dbms
+        $sql = "INSERT OR FAIL INTO " . $tabella . " (" .
+                implode(',',array_keys($v)).
+                ") VALUES (" .
+                implode(',',$v).
+            ")";            
             echo ".";
-            //echo $sql .  "<br>\n";
+            //echo $sql .  "\n";
             $conn->query($sql);
     }
     //$conn = null;
