@@ -15,7 +15,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 # Come: 
 <b>1)</b>   Dopo aver abilitato i PDO, lanciare la creazione
 			fisica della base dati: "php basedati.php" (non è sempre necessario
-			specialmente se l'avete fatto almeno una volta); 
+			specialmente se l'avete fatto almeno una volta);<br> 
 <b>2)</b> 	lanciare il seguente comando che si occupera' di recupare i dati utili 
 		  	dei video e li memorizzerà nell base dati (video.sq3): 
 		  	"<i>php scandir.php 0|1 le/cartelle/dove/sono/i/video/separate/da/spazi/se/sono/diverse</i>".
@@ -25,17 +25,17 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			determinano se la tabella video della base dati verrà svuotata (<i>1</i>) o
 			meno (<i>0</i>). Usare lo zero è utile per accodare altre cartelle senza dover riiniziare.
 			<b>N.B.:</b> le cartelle che contengono spazi vanno
-			digitate dentro le virgolette (singole o doppie"); 
+			digitate dentro le virgolette (singole o doppie"); <br>
 <b>3)</b> 	dopo aver usato scandir.php, usare "<i>php aggrionadb.php</i>" solo se avete dei file .nfo con 
 			lo stesso nome dei video. Ovvero se non ci sono, non ha
 			senso lanciarlo. In caso di presenza di .nfo sui dischi questo script associa i
-			generi, registi, anno e la durata al video, sempre che abbiano origine da Kodi; 
+			generi, registi, anno e la durata al video, sempre che abbiano origine da Kodi; <br>
 <b>4)</b> 	per creare una play list casuale,
 			lanciare "<i>php playlistcasuale.php -n4 -e"vob cd1 cd2" -g"Animazione Family"</i>. 
 			-n è il numero di video da inserire nella play list, 
 			-e esclude i video che contegono le parole elencate nel path e nel nome del file,
 			-g funziona solo se sono stati inseriti i generi, permette di filtrare i
-			generi associati ai video.
+			generi associati ai video.<br>
 
 Lo script "<i>generi.php</i>"" ha il solo scopo di elencare i generi presi dai file .nfo. Lo script "<i>list_txt</i>", esporta la lista dei video in archivio in formato csv/txt con separatore il punto e virgola (;). I parametri per list_txt.php sono:
 <b>-g</b> per una lista ordinata per genere (per default è ordinata per ordine alfabetico crescente del titolo);
