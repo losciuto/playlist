@@ -7,10 +7,10 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 
 # Cosa serve:
 
-1) il php 7.0 (se provate altre versioni fatemelo sapere) e relativo client con i moduli PDO e PDO-SQLite attivati;
-2) periferiche disco con tanti video;
-3) questi script, che basta solo decomprimere in una cartella di lavoro;
-4) un terminale per usare la riga di comando.
+1) il php 7.0 (se provate altre versioni fatemelo sapere) e relativo client con i moduli PDO e PDO-SQLite attivati;<br>
+2) periferiche disco con tanti video;<br>
+3) questi script, che basta solo decomprimere in una cartella di lavoro;<br>
+4) un terminale per usare la riga di comando.<br>
 
 # Come: 
 
