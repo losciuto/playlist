@@ -5,14 +5,14 @@ Vi direte a che serve: non ho molta voglia di scorrere i dischi pieni di video p
 
 Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche modifiche se non nessuna, possano funzionare egregiamente anche sotto mac.
 
-# Cosa serve:
+## Cosa serve:
 
 1) il php 7.0 (se provate altre versioni fatemelo sapere) e relativo client con i moduli PDO e PDO-SQLite attivati;<br>
 2) periferiche disco con tanti video;<br>
 3) questi script, che basta solo decomprimere in una cartella di lavoro;<br>
 4) un terminale per usare la riga di comando.<br>
 
-# Come: 
+## Come: 
 
 <ul>
 <li>
@@ -53,7 +53,7 @@ Lo script "<i>generi.php</i>"" ha il solo scopo di elencare i generi presi dai f
 <b>-d</b> ordina per titolo o per genere (<i>-g</i>) in ordine descrescente. 
 Gli altri file php sono degli include necessari per il funzionamento.
 
-# Parametri possibili:
+## Parametri possibili:
 
 Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
 
@@ -68,7 +68,7 @@ Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
 <b>-u</b> permette di visionare i titoli scaricati per <i>ultimi</i> o per <i>primi</i> (<i>dipende dalla opzione -o che è per default crescente ovvero i primi inseriti</i>) in funzione della data di modifica del file video. Anche con questa opzione, di fatto, si perde il principio di casualità;<br>
 <b>-i</b> permette di includere dei termini da ricercare nel path e nel titolo, è predominante sui termini da escludere (<i>-e</i>), ovvero i termini da includere sono prioritari rispetto a quelli da escludere.<br>
 
-# Esempi:
+## Esempi:
 
 <b>php playlistcasuale.php</b> (lancia la creazione di una playlist con i parametri di default e relativa visione);<br>
 <b>php playlistcasuale.php -u</b> (lancia la creazione e la visione dei 5 video <i>più vecchi</i> con il resto dei parametri di default);<br>
@@ -78,6 +78,8 @@ Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
 <b>php playlistcasuale.php -n3 -r"'Stanley Kubrick'"</b> (lancia una playlist casuale per <i>3</i> video del regista <i>'Stanley Kubrick'</i> dal piu' vecchio al piu' nuovo senza definizione di genere o esclusione dei termini di default);<br>
 <b>php playlistcasuale.php -n3 -o"D" -r"'Rocco Papaleo'"</b> (lancia una playlist casuale per <i>3</i> video del regista <i>'Rocco Papaleo'</i> ad iniziare dal più <i>recente</i>, senza definizione di genere o esclusione dei termini di default).
 ...
+
+# Interfaccia Yad
 
 Sono state aggiunte alcune interfacce grafiche realizzate grazie a [Yad (Yet Another Dialog)](https://github.com/v1cont/yad) che rendono l'interazione più facile. [Vedi relativo repository](https://github.com/losciuto/yad-windows-playlist)
 
