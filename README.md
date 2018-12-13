@@ -66,7 +66,8 @@ Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
 <b>-r</b> consente di selezionare i video dei registi da includere nella palylist in ordine di anno crescente o decresente determinato con l'opzione <i>-o</i> (<i>si perde il principio di casualità</i>);<br>
 <b>-o</b> opzione di ordine crescente o decrescente utilizzato solo nelle opzioni -r o -u (<i>default crescente = A, opzione decrescente = D</i>);<br>
 <b>-u</b> permette di visionare i titoli scaricati per <i>ultimi</i> o per <i>primi</i> (<i>dipende dalla opzione -o che è per default crescente ovvero i primi inseriti</i>) in funzione della data di modifica del file video. Anche con questa opzione, di fatto, si perde il principio di casualità;<br>
-<b>-i</b> permette di includere dei termini da ricercare nel path e nel titolo, è predominante sui termini da escludere (<i>-e</i>), ovvero i termini da includere sono prioritari rispetto a quelli da escludere.<br>
+<b>-i</b> permette di includere dei termini da ricercare nel path e nel titolo, è predominante sui termini da escludere (<i>-e</i>), ovvero i termini da includere sono prioritari rispetto a quelli da escludere;<br>
+<b>-p</b> permette di creare altre playlist. I formati gestiti sono: m3u e pls.<br> 
 
 ## Esempi:
 
