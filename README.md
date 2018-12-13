@@ -57,7 +57,7 @@ Gli altri file php sono degli include necessari per il funzionamento.
 
 Tutti i parametri sono opzionali in quanto sono dati tutti di default.<br>
 
-<b>-n</b> il numero di titoli che volete nella playlist (default "5"). Se si utilizza lo zero (0) il numero massimo verrà impostato a 999999.<br>
+<b>-n</b> il numero di titoli che volete nella playlist (default "5"). Se si utilizza lo zero (0) il numero massimo verrà impostato a 9999.<br>
 <b>-e</b> termini che volete escludere dalla visione. I termini in questione sono il path ed il nome del file. Se sono presenti degli spazi è meglio includere i termini fra virgolette singole o doppie (<i>default "cartoni inglesi cd1 cd2 originali vob serie volume originale"</i>);<br>
 <b>-g</b> i generi da includere nella visione. Se sono più di uno, separare con uno spazio ed includere fra le virgolette (funziona solo se l'archivio è stato aggionato con <i>aggiornadb.php</i>.);<br>
 <b>-m</b> il nome del player da utilizzare per la visione (<i>default "smplayer"</i>);<br>
