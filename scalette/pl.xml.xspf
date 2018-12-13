@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/" xmlns:vlc="http://www.videolan.org/vlc/playlist/ns/0/">
+	<title>Scaletta del 2018-12-13 20:01:11</title>
+	<trackList>
+		<track>
+			<location>file:///%2Fmedia%2Froot%2FTrekStor1%2FFilms%2FThe.Cell.La.Cellula.2000.iTALiAN.DVDRip.XviD-T4P3%2FThe.Cell.La.Cellula.2000.iTALiAN.DVDRip.XviD-T4P3.avi</location>
+            		<title>Pl by ML - The.Cell.La.Cellula.2000.iTALiAN.DVDRip.XviD-T4P3</title>
+           		<duration>104</duration>
+		</track>
+		<track>
+			<location>file:///%2Fmedia%2Froot%2FTrekStor1%2FFilms%2FSelf%20less%20%282015%29%20BDRip%20720p%20HEVC%20ITA%20ENG%20AC3%20ITA%20ENG%20Sub%20PirateMKV.mkv</location>
+            		<title>Pl by ML - Self less (2015) BDRip 720p HEVC ITA ENG AC3 ITA ENG Sub PirateMKV</title>
+           		<duration>116</duration>
+		</track>
+		<track>
+			<location>file:///%2Fmedia%2Froot%2FTrekStor1%2FFilms%2FInterstellar.2014.iTALiAN.MD.DVDSCR.XviD-FREE.avi</location>
+            		<title>Pl by ML - Interstellar.2014.iTALiAN.MD.DVDSCR.XviD-FREE</title>
+           		<duration>169</duration>
+		</track>
+	</trackList>
+</playlist>
