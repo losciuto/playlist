@@ -1,0 +1,1 @@
+Action,Adventure,Animation,Animazione,Avventura,Azione,Biography,Children,Comedy,Commedia,Crime,Documentario,Documentary,Drama,Dramma,Famiglia,Family,Fantascienza,Fantasy,Foreign,Guerra,History,Horror,Mistero,Music,Musica,Musical,Mystery,Romance,Sci-Fi,Short,Sport,Storia,Thriller,War,Western,name,televisione film,
