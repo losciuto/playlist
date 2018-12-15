@@ -48,13 +48,6 @@ function tabgenere($gen,$conn){
     
     $gen = trim($gen);
     $i = 0;
-    
-    $sql = "INSERT OR REPLACE INTO generi (genere,volte)
-            VALUES ('". $gen . "',(SELECT CASE WHEN exists(SELECT 2 FROM generi WHERE genere='" . $gen . "')
-                                                    THEN (volte + 1)
-                                                    END as volte
-													FROM generi
-                                                    ))";
   
     $sql = "INSERT OR REPLACE INTO generi (genere,volte) VALUES ('" . $gen . "',
     ifnull((SELECT volte FROM generi WHERE genere = '" . $gen . "'), 0) + 1);";
@@ -72,33 +65,8 @@ function tabgenere($gen,$conn){
         // String.
         throw new CustomException( $Exception->getMessage( ) , $Exception->getCode( ) );
     }
-
-  
-    
-    /*
-    // cerco l'esistenza del genere nella tabella
-    $sql = "SELECT count(*) FROM generi WHERE genere = '" . $gen . "'";
-    $nRows = $conn->query($sql)->fetchColumn(); 
-    
-    if($nRows <= 0) {
-        
-        $i++;
-    
-        $sql = "INSERTO INTO generi (genere,nvolte) VALUES ('" . $gen . "',1)";
-        $conn->query($sql);
-        
-        echo "Aggiunto genere: " . $gen . "  $i\n";
-
-    } else
-
-        $sql = "UPDATE generi SET nvolte = (nvolte + 1) WHERE genere = '".$gen ."'";
-        $conn->query($sql);
-        
-         echo "Aggiornato genere: " . $gen . "\n";
-    
-    }
-*/
 }
+
 // funzione di aggiornamento record del video corrente
 function aggiornagenere($id,$genre,$conn,$duration,$director,$year){
 
@@ -107,6 +75,14 @@ function aggiornagenere($id,$genre,$conn,$duration,$director,$year){
 }
 
 // inizio applicazione
+
+// azzero la tabella generi
+$sql = 'delete from generi';
+$conn->query($sql);
+
+$sql = 'VACUUM generi';
+$conn->query($sql);  
+
 // scansione tabella video per associare i dati grabbati dai file .nfo
 // query di loop
 $sql = "SELECT id,file FROM " . $tabella . " ORDER BY file ASC;";
