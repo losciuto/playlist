@@ -254,10 +254,11 @@ function creafileplaylist($nomepl, $posdir, $testo, $testotxt, $testom3u="", $te
 	    file_put_contents($posdir . $nomepl . ".xspf", $testo);		
 		// scrive playlist in formato .m3u e pls non estesi ovvero formato txt
 	    file_put_contents($posdir . $nomepl . ".pls.m3u.txt", $testotxt);
+        
 	    // altri formati (.m3u estesa e .pls estesa)
 		if(playlistformat("m3u")){
-			// scrive playlist formato .mu3 estesa
-	        file_put_contents($posdir . $nomepl . ".m3u", $testom3u);
+            // scrive playlist formato .mu3 estesa
+            file_put_contents($posdir . $nomepl . ".m3u", $testom3u);
         }
         if(playlistformat("pls")){
         	// provo a convertire in codifica utf-8 il testo, non sapendo da che codifica ha origine
