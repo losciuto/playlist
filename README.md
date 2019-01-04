@@ -40,7 +40,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			generi, registi, anno e la durata al video, sempre che abbiano origine da Kodi; <br>
 </li>
 <li>
-	<b>4)</b> 	con <i>php aggiornadaimdb.php</i> è possibile "recuperare" dalle pagine in inglese del sito IMDb tutti i dati che servono per completare la palylist (generi, registi, anno e durata). Recupera anche altri dati che al momento non sono gestiti dal database presvito per questi script. Nulla vieta di usare in combinazione il punto 3) ed il punto 4).
+	<b>4)</b> 	con <i>php aggiornadaimdb.php</i> è possibile "recuperare" dalle pagine in inglese del sito IMDb tutti i dati che servono per completare la palylist (generi, registi, anno e durata). Recupera anche altri dati che al momento non sono gestiti dal database previsto per questi script. Nulla vieta di usare in combinazione il punto 3) ed il punto 4).
 </li>
 	<li>
 <b>5)</b> 	per creare una play list casuale,
