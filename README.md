@@ -1,6 +1,7 @@
 # Gestione playlist
 
-Scopo di queste righe in php è quello di creare una base dati (SQLite3) di video presenti sulle vostre periferiche, nel caso in cui avete file di tipo .nfo (gli .nfo - file di tipo xml - che ho usato sono sati generati da Kodi media center. Probabilmente, in un prossimo futuro, scriverò qualche riga per "prelevare", dalle pagine pubblicate su internet, i dati necessari per la playlist) con i generi, i registi e l'anno associati ai video, di aggiornare la basedati con i generi relativi ai video che avete memorizzato. Alla fine, lanciando playlistcasuale.php, di creare ed eseguire una playlist creata casualmente o meno dalla precedente basedati.
+Scopo di queste righe in php è quello di creare una base dati (SQLite3) di video presenti sulle vostre periferiche, nel caso in cui avete file di tipo .nfo (gli .nfo - file di tipo xml - che ho usato sono stai generati da Kodi media center) con i generi, i registi e l'anno associati ai video, di aggiornare la basedati con i generi relativi ai video che avete memorizzato. Alla fine, lanciando playlistcasuale.php, di creare ed eseguire una playlist creata casualmente o meno dalla precedente basedati.
+In data 04/01/2019 ho aggiunto il file per lo scaping delle pagine IMDb in lingua inglese. Questo permette di "recuperare" direttamente dalle scede del sito (IMDb) i dati che inserisco successivamente nel database locale. Ho usato la [libreria di scaping](https://github.com/sunra/php-simple-html-dom-parser) di [sunra](https://github.com/sunra) che ringrazio come ringrazio, lo faccio spesso, ma senza di loro sarei stato troppo pigro per creale da me, tutti gli altri da cui ho preso idee e codice.
 Vi direte a che serve: non ho molta voglia di scorrere i dischi pieni di video per crearmi una playlist per cui uso queste righe.
 
 Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche modifiche se non nessuna, possano funzionare egregiamente anche sotto mac.
@@ -40,6 +41,14 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 </li>
 <li>
 <b>4)</b> 	per creare una play list casuale,
+			lanciare "<i>php playlistcasuale.php -n4 -e"vob cd1 cd2" -g"Animazione Family"</i>. 
+			-n è il numero di video da inserire nella play list, 
+			-e esclude i video che contegono le parole elencate nel path e nel nome del file,
+			-g funziona solo se sono stati inseriti i generi, permette di filtrare i
+			generi associati ai video.<br>
+</li>
+	<li>
+<b>5)</b> 	per creare una play list casuale,
 			lanciare "<i>php playlistcasuale.php -n4 -e"vob cd1 cd2" -g"Animazione Family"</i>. 
 			-n è il numero di video da inserire nella play list, 
 			-e esclude i video che contegono le parole elencate nel path e nel nome del file,
