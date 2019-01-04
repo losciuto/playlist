@@ -21,6 +21,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			fisica della base dati: "php basedati.php" (non è sempre necessario
 			specialmente se l'avete fatto almeno una volta);<br> 
 </li>
+	<br>
 <li>
 <b>2)</b> 	lanciare il seguente comando che si occupera' di recupare i dati utili 
 		  	dei video e li memorizzerà nell base dati (video.sq3): 
@@ -33,15 +34,18 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			<b>N.B.:</b> le cartelle che contengono spazi vanno
 			digitate dentro le virgolette (singole o doppie"); <br>
 </li>
+	<br>
 <li>
 <b>3)</b> 	dopo aver usato scandir.php, usare "<i>php aggrionadb.php</i>" solo se avete dei file .nfo con 
 			lo stesso nome dei video. Ovvero se non ci sono, non ha
 			senso lanciarlo ed è meglio passare direttamente al punto 4). In caso di presenza di .nfo sui dischi questo script associa i
 			generi, registi, anno e la durata al video, sempre che abbiano origine da Kodi; <br>
 </li>
+	<br>
 <li>
 	<b>4)</b> 	con <i>php aggiornadaimdb.php</i> è possibile "recuperare" dalle pagine in inglese del sito IMDb tutti i dati che servono per completare la palylist (generi, registi, anno e durata). Recupera anche altri dati che al momento non sono gestiti dal database previsto per questi script. Nulla vieta di usare in combinazione il punto 3) ed il punto 4). <i>aggiornadaimdb.php</i> crea anche un log (nella cartella "log") per monitorare la ricerca dei titoli e l'aggiornamento della base dati.
 </li>
+	<br>
 	<li>
 <b>5)</b> 	per creare una play list casuale,
 			lanciare "<i>php playlistcasuale.php -n4 -e"vob cd1 cd2" -g"Animazione Family"</i>. 
@@ -51,7 +55,7 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 			generi associati ai video.<br>
 </li>
 </ul>
-	
+<br>
 Lo script "<i>generi.php</i>"" ha il solo scopo di elencare i generi presi dai file .nfo. Lo script "<i>list_txt</i>", esporta la lista dei video in archivio in formato csv/txt con separatore il punto e virgola (;). I parametri per list_txt.php sono:
 <b>-g</b> per una lista ordinata per genere (per default è ordinata per ordine alfabetico crescente del titolo);
 <b>-d</b> ordina per titolo o per genere (<i>-g</i>) in ordine descrescente. 
