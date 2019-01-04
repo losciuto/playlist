@@ -36,16 +36,11 @@ Gli script sono stati testati con php 7.0 in linux, ma cio' non toglie che poche
 <li>
 <b>3)</b> 	dopo aver usato scandir.php, usare "<i>php aggrionadb.php</i>" solo se avete dei file .nfo con 
 			lo stesso nome dei video. Ovvero se non ci sono, non ha
-			senso lanciarlo. In caso di presenza di .nfo sui dischi questo script associa i
+			senso lanciarlo ed è meglio passare direttamente al punto 4). In caso di presenza di .nfo sui dischi questo script associa i
 			generi, registi, anno e la durata al video, sempre che abbiano origine da Kodi; <br>
 </li>
 <li>
-<b>4)</b> 	per creare una play list casuale,
-			lanciare "<i>php playlistcasuale.php -n4 -e"vob cd1 cd2" -g"Animazione Family"</i>. 
-			-n è il numero di video da inserire nella play list, 
-			-e esclude i video che contegono le parole elencate nel path e nel nome del file,
-			-g funziona solo se sono stati inseriti i generi, permette di filtrare i
-			generi associati ai video.<br>
+	<b>4)</b> 	con <i>php aggiornadaimdb.php</i> è possibile "recuperare" dalle pagine in inglese del sito IMDb tutti i dati che servono per completare la palylist (generi, registi, anno e durata). Recupera anche altri dati che al momento non sono gestiti dal database presvito per questi script. Nulla vieta di usare in combinazione il punto 3) ed il punto 4).
 </li>
 	<li>
 <b>5)</b> 	per creare una play list casuale,
